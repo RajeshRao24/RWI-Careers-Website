@@ -26,20 +26,95 @@
     <div class="container">
      <h1 class="text-centre mt-4 mb-4">FastnEasy Car Rentals Bengaluru</h1>
   </body>
-  <img id="banner" src="https://replit.com/@raorajesh03/RWI-Careers-Website#Car_Rental_Banner.jpg">
+  <!--<img id="banner" src="Car_Rental_Banner.jpg">-->
+  <img id="Banner"
+    <img src="/static/Car_Rental_Banner.jpg">
     <h2>About FastnEasy</h2>
   <p>
     FastnEasy provides a wide range of car rental options, including hatchbacks, luxury sedans, Innova, and tempo travellers for groups. Specializing in luxury and outstation rentals, our air-conditioned cars are meticulously cleaned and maintained, ensuring optimal service quality.
   </p>
  <p>View our available cars that can be rented on an hourly, daily, or weekly basis</p> 
-  <h3 class="text-centre mt-4 mb-4">Available Cars - Daily/Weekly/Monthly</h3>
-  <h4>CAMRY / ACCORD OR SIMILAR
+
+  
+    <h3 class="text-centre mt-4 mb-4">Available Cars - Daily/Weekly/Monthly</h3>
+
+  <!--<p>
+    {{cars}}
+  </p> -->
+
+  
+  <div class="border-bottom row" style="margin-bottom:16px;padding-bottom:8px;> 
+<div class="col-5">
+   <h4 
+     style="color:rgb(120,120,120);margin-bottom:10px;">
+   </h4>
+    
+  {% for cars in cars %} 
+    <div class>
+     <table class="table" border="3" align="left"> 
+      
+       <thead>
+         <tr>
+
+           <!--Examples 
+           <th style="text-align:left">Month</th>
+           <th style="white-space:nowrap">My Savings for a new car</th>
+           <th style="width:70%">Month</th>-->
+
+           
+          <th style="white-space:nowrap" scope="col">Model</th>
+          <th scope="col">Brand</th>
+          <th scope="col">Daily Price</th>
+          <th scope="col">Available Cars#</th>
+           <th scope="col">Click to Book</th>
+         </tr>
+         </thead>
+       
+         <tbody>
+           <tr>
+             
+             <td style="text-align:centre;     
+             border-top:yes;">
+               <th style="white-space:nowrap">
+                {{cars['carmodel']}}</td>
+             <td style="text-align:centre; 
+                 width:70px; border-top:yes;"> 
+                 {{cars['carbrand']}}</td>
+             <td style="text-align:centre; 
+                 width:70px; border-top:yes;"> 
+                 {{cars['carrentaldailyprice']}}</td>
+              <td style="text-align:centre; 
+                  width:70px; border-top:yes;"> 
+                  {{cars['totalavailable']}}</td>
+
+             
+        <!--     <td>{{cars['carmodel']}}</td>
+             <td>{{cars['carbrand']}}</td>
+             <td>{{cars['carrentaldailyprice']}}</td>
+             <td>{{cars['totalavailable']}}</td> -->
+             <td><button type="button" class="btn btn-danger">Book Car</button></td>
+            {% endfor %}
+             </tr>
+           </tbody>
+     </table>
+       
+     
+  </div>
+   
+  <!--  <div class="col-3">
+      <button type="button" class="btn btn-danger">Book Car</button>
+    </div> -->
+    
+<!--<div class="col-6">
+   <button type="button" class="btn btn-danger">Book Car</button>
+</div> -->
+ <!-- <h4>CAMRY / ACCORD OR SIMILAR
     PRICE INR 54,402</h4> <p align="right" <button class="btn btn-danger">Book</button> </p>
   <h4>DZIRE / ETIOS / AMAZE OR SIMILAR
   PRICE INR 11,125</h4><button class="btn btn-danger">Book</button>
   <h4>MERCEDES E CLASS OR SIMILAR
     PRICE INR 73,095</h4><button class="btn btn-danger">Book</button>
-  <h4></h4>
+  <h4></h4> -->
 <div style='text-align:centre'>
   <button class="btn btn-primary btn-sm"> Google Pay</button>
   <button class="btn btn-primary btn-sm">Net Banking</button> 
